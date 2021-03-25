@@ -5,8 +5,8 @@ const app = express();
 app.use(bodyParser.json());
 
 app.post('/', async (req, res) => {
-  console.log(req);
-  res.send('Yoo');
+  const { email } = req.body;
+  res.send(email);
 });
 
 const PORT = process.env.PORT || 5000;
