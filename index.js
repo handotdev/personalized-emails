@@ -1,6 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+app(bodyParser.json());
 
 app.post('/', async (req, res) => {
   console.log(req);
