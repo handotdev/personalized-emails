@@ -44,7 +44,15 @@ app.post('/', async (req, res) => {
     to: email,
     from: 'hyw2@cornell.edu',
     subject: 'Learning styles study: An article tailored for you',
-    html: `Hey there,<br/><br/>Thank you for filling out the survey.<br/>Here <a href="${articleLink}">an article about mindfulness and mindlessness</a> tailored to your learning style!<br/><br/>Best,<br/>Han`,
+    html: `Hello and thanks for sharing your learning preferences with us!
+    <br/>
+    <br/>
+    We've prepared an article about mindfulness and mindlessness tailored to your learning style and would appreciate it if you can give it a read. You can read the article (<a href="${articleLink}">here</a>) with more details, thanks!
+    <br/>
+    <br/>
+    Best,
+    <br/>
+    Han`,
   };
 
   const currentTimestamp = new Date().getTime();
