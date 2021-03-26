@@ -11,7 +11,15 @@ app.use(bodyParser.json());
 app.post('/', async (req, res) => {
   const { email, examples, visuals, logical, storytelling } = req.body;
 
-  console.log(typeof examples);
+  const examplesScore = parseInt(examples, 10);
+  const visualsScore = parseInt(visuals, 10);
+  const logicalScore = parseInt(logical, 10);
+  const storytellingScore = parseInt(storytelling, 10);
+
+  console.log(examplesScore);
+  console.log(visualsScore);
+  console.log(logicalScore);
+  console.log(storytellingScore);
 
   const msg = {
     to: email, // Change to your recipient
