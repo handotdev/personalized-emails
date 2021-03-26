@@ -11,10 +11,12 @@ app.use(bodyParser.json());
 app.post('/', async (req, res) => {
   const { email, examples, visuals, logical, storytelling } = req.body;
 
+  console.log(typeof examples);
+
   const msg = {
     to: email, // Change to your recipient
     from: 'hyw2@cornell.edu',
-    subject: 'Sending with SendGrid is Fun',
+    subject: 'An Article About Mindfulness and Mindlessness',
     text: 'and easy to do anywhere, even with Node.js',
   };
   sgMail
